@@ -417,7 +417,7 @@ orderRepo.find({include: ['customer']});
 or use APIs with controllers:
 
 ```
-GET http://localhost:3000/orders?filter[include][][relation]=customer
+GET http://localhost:3000/orders?filter[include][]=customer
 ```
 
 ### Enable/disable the inclusion resolvers
@@ -470,7 +470,7 @@ export class OrderRepository extends DefaultCrudRepository {
   this is the same as the url:
 
   ```
-  GET http://localhost:3000/orders?filter[include][][relation]=customer
+  GET http://localhost:3000/orders?filter[include][]=customer
   ```
 
   which returns:

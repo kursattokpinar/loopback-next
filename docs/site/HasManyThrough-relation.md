@@ -470,7 +470,7 @@ doctorRepository.find({include: ['patients']});
 or use APIs with controllers:
 
 ```
-GET http://localhost:3000/doctors?filter[include][][relation]=patients
+GET http://localhost:3000/doctors?filter[include][]=patients
 ```
 
 ### Enable/disable the inclusion resolvers
@@ -533,7 +533,7 @@ export class DoctorRepository extends DefaultCrudRepository<
   this is the same as the url:
 
   ```
-  GET http://localhost:3000/doctors?filter[include][][relation]=patients
+  GET http://localhost:3000/doctors?filter[include][]=patients
   ```
 
   which returns:
