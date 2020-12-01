@@ -131,7 +131,7 @@ await customerRepository.find({include: ['orders']});
 
 Or stringified JSON format:
 
-`/customers?filter={"include":[{"orders"]}`
+`/customers?filter={"include":["orders"]}`
 
 Result:
 
@@ -157,7 +157,7 @@ await customerRepository.find({
 
 {% include code-caption.html content="REST" %}
 
-`/customers?filter[include][]=orders?filter[include][]=address`
+`/customers?filter[include][]=orders&filter[include][]=address`
 
 Result:
 
