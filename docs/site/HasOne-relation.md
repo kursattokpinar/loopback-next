@@ -513,7 +513,7 @@ allows users to retrieve all suppliers along with their related accounts through
 the following code at the repository level:
 
 ```ts
-supplierRepo.find({include: [{relation: 'account'}]});
+supplierRepo.find({include: ['account']});
 ```
 
 or use APIs with controllers:
@@ -565,7 +565,7 @@ export class SupplierRepository extends DefaultCrudRepository {
   if you process data at the repository level:
 
   ```ts
-  supplierRepository.find({include: [{relation: 'account'}]});
+  supplierRepository.find({include: ['account']});
   ```
 
   this is the same as the url:
@@ -618,7 +618,7 @@ To query **multiple relations**, for example, return all Suppliers including
 their orders and address, in Node API:
 
 ```ts
-customerRepo.find({include: [{relation: 'orders'}, {relation: 'address'}]});
+customerRepo.find({include: ['orders', 'address']});
 ```
 
 Equivalently, with url, you can do:
@@ -663,7 +663,7 @@ customerRepo.find({
     {
       relation: 'orders',
       scope: {
-        include: [{relation: 'manufacturers'}],
+        include: ['manufacturers'],
       },
     },
   ],

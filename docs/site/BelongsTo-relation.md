@@ -411,7 +411,7 @@ allows users to retrieve all orders along with their related customers through
 the following code at the repository level:
 
 ```ts
-orderRepo.find({include: [{relation: 'customer'}]});
+orderRepo.find({include: ['customer']});
 ```
 
 or use APIs with controllers:
@@ -464,7 +464,7 @@ export class OrderRepository extends DefaultCrudRepository {
   if you process data at the repository level:
 
   ```ts
-  orderRepository.find({include: [{relation: 'customer'}]});
+  orderRepository.find({include: ['customer']});
   ```
 
   this is the same as the url:

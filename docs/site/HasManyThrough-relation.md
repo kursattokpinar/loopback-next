@@ -464,7 +464,7 @@ allows users to retrieve all doctors along with their related patients through
 the following code at the repository level:
 
 ```ts
-doctorRepository.find({include: [{relation: 'patients'}]});
+doctorRepository.find({include: ['patients']});
 ```
 
 or use APIs with controllers:
@@ -527,7 +527,7 @@ export class DoctorRepository extends DefaultCrudRepository<
   if you process data at the repository level:
 
   ```ts
-  doctorRepository.find({include: [{relation: 'patients'}]});
+  doctorRepository.find({include: ['patients']});
   ```
 
   this is the same as the url:
